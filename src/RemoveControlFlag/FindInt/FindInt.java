@@ -1,4 +1,4 @@
-package RemoveControlFlag;
+package RemoveControlFlag.FindInt;
 
 public class FindInt {
 
