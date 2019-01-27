@@ -19,4 +19,31 @@ public class Label {
     public boolean isNull() {
         return false;
     }
+
+    // Factory Method
+    public static Label newNull() {
+        return NullLabel.getInstance();
+    }
+
+    // Null Object
+    private static class NullLabel extends Label {
+        // Singleton
+        private static final NullLabel singleton = new NullLabel();
+
+        private static NullLabel getInstance() {
+            return singleton;
+        }
+
+        private NullLabel() {
+            super("(none)");
+        }
+
+        @Override
+        public void display() {}
+
+        @Override
+        public boolean isNull() {
+            return true;
+        }
+    }
 }
